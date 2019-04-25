@@ -1,6 +1,5 @@
 package frostmourne;
 
-import java.security.interfaces.RSAKey;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -57,6 +56,7 @@ public class Main {
     // object
     private static OtherClassWithToString otherClassWithToString = new OtherClassWithToString();
 
+    private static Service service = new ServiceImpl();
 
     static {
         otherClassWithToString.setAge(1);
@@ -105,6 +105,7 @@ public class Main {
                 Map<String, Object> map = multiParamMethod(7, "123", doubleList);
                 String error = throwMethod(r.nextInt(1000));
                 OtherClass otherClass = inputObject(otherClassWithToString);
+                List<String> djfdkfjk = service.doService(r.nextInt(100), "djfdkfjk");
                 TimeUnit.SECONDS.sleep(1L);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -119,7 +120,6 @@ public class Main {
         otherClass.setName(otherClassWithToString.getName());
         otherClass.setScore(otherClassWithToString.getScore());
         otherClass.setMoney(otherClassWithToString.getMoney());
-        sleep(2);
         return otherClass;
     }
 
@@ -127,7 +127,7 @@ public class Main {
         if (nextInt % 7 == 0) {
             throw new RuntimeException("occor error, message is blabla");
         } else {
-            sleep(3);
+            sleep(1);
             return "success";
         }
     }
@@ -137,19 +137,16 @@ public class Main {
         stringObjectMap.put("i", i);
         stringObjectMap.put("s", s);
         stringObjectMap.put("doubleList", doubleList);
-        sleep(1);
         return stringObjectMap;
     }
 
     static List<Double> listMethod(double v) {
         List<Double> result = new ArrayList<Double>();
         result.add(v);
-        sleep(1);
         return result;
     }
 
     static int intMethod(String java) {
-        sleep(1);
         return java.length();
     }
 
@@ -157,7 +154,6 @@ public class Main {
         i = 7;
         String n = "11";
         n += i;
-        sleep(1);
         System.out.println(n);
     }
 }
