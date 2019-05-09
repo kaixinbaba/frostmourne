@@ -7,51 +7,51 @@ public class Main {
 
     // public
     // wrapper type
-    public Integer publicInteger = 1;
-    public Boolean publicBoolean = true;
-    public Double publicDouble = 19491001.0D;
-    public Float publicFloat = 1314.520F;
+    public static Integer publicInteger = 1;
+    public static Boolean publicBoolean = true;
+    public static Double publicDouble = 19491001.0D;
+    public static Float publicFloat = 1314.520F;
     // basic type
-    public int publicInt = 7;
-    public boolean publicBool = false;
-    public double publicDou = 1234D;
-    public float publicFlo = 4321F;
+    public static int publicInt = 7;
+    public static boolean publicBool = false;
+    public static double publicDou = 1234D;
+    public static float publicFlo = 4321F;
 
     // protected
     // wrapper type
-    protected Integer protectedInteger = 10;
-    protected Boolean protectedBoolean = true;
-    protected Double protectedDouble = 194910010.0D;
-    protected Float protectedFloat = 13140.520F;
+    protected static Integer protectedInteger = 10;
+    protected static Boolean protectedBoolean = true;
+    protected static Double protectedDouble = 194910010.0D;
+    protected static Float protectedFloat = 13140.520F;
     // basic type
-    protected int protectedInt = 70;
-    protected boolean protectedBool = false;
-    protected double protectedDou = 12340D;
-    protected float protectedFlo = 43210F;
+    protected static int protectedInt = 70;
+    protected static boolean protectedBool = false;
+    protected static double protectedDou = 12340D;
+    protected static float protectedFlo = 43210F;
 
     // default
     // wrapper type
-    Integer defaultInteger = 100;
-    Boolean defaultBoolean = true;
-    Double defaultDouble = 1949100100.0D;
-    Float defaultFloat = 131400.520F;
+    static Integer defaultInteger = 100;
+    static Boolean defaultBoolean = true;
+    static Double defaultDouble = 1949100100.0D;
+    static Float defaultFloat = 131400.520F;
     // basic type
-    int defaultInt = 700;
-    boolean defaultBool = false;
-    double defaultDou = 123400D;
-    float defaultFlo = 432100F;
+    static int defaultInt = 700;
+    static boolean defaultBool = false;
+    static double defaultDou = 123400D;
+    static float defaultFlo = 432100F;
 
     // private
     // wrapper type
-    private Integer privateInteger = 1000;
-    private Boolean privateBoolean = true;
-    private Double privateDouble = 19491001000.0D;
-    private Float privateFloat = 1314000.520F;
+    private static Integer privateInteger = 1000;
+    private static Boolean privateBoolean = true;
+    private static Double privateDouble = 19491001000.0D;
+    private static Float privateFloat = 1314000.520F;
     // basic type
-    private int privateInt = 7000;
-    private boolean privateBool = false;
-    private double privateDou = 1234000D;
-    private float privateFlo = 4321000F;
+    private static int privateInt = 7000;
+    private static boolean privateBool = false;
+    private static double privateDou = 1234000D;
+    private static float privateFlo = 4321000F;
 
     // object
     private static OtherClassWithToString otherClassWithToString = new OtherClassWithToString();
@@ -148,6 +148,9 @@ public class Main {
 
     static int intMethod(String java) {
         return java.length();
+    }
+    private String getString(String a, int b) {
+        return a + b;
     }
 
     private static void voidMethod(int i) {
